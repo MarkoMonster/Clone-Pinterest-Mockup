@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI',Arial, Helvetica, sans-serif;
 }
 header{
     display: flex;
@@ -18,7 +18,7 @@ header{
     width: 98%;
     display: grid;
     gap: 1%;
-    grid-template-columns: 20% 68% 10% ;
+    grid-template-columns: 22% 66% 10% ;
     grid-template-areas: 'nl search nr';
 
 }
@@ -58,6 +58,7 @@ header{
     padding: 0 15px;
     letter-spacing: 1px;
     font-weight: bold;
+    font-size: 16px;
 }
 .link:hover, .link.active{
     color: white;
@@ -78,4 +79,124 @@ header{
 }
 .link-icon:hover{
     background: rgba(0,0,0,0.06);
+}
+
+main  {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.container-grid{
+    display: gird;
+    columns: 5;
+    width: 95%;
+}
+.pin-box{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.container-pin{
+    position: relative;
+}
+.pin-box .pin-box-options{
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+.pin-box:hover .pin-box-options{
+    opacity: 1;
+}
+
+.pin-box-img{
+    width: 100%;
+    border-radius: 1.5rem;
+    display: block;
+}
+.pin-box-options{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pin-box-options-menu-top{
+    display: flex;
+    justify-content: space-between;
+}
+.pin-box-options-menu-top-item{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    color: white;
+    border-radius: 20px;
+}
+.item-red{
+    background-color: #cc0000;
+    padding: 0 15px;
+}
+.pin-box-options-menu-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pin-box-options-menu-bottom-item{
+    background: rgba(255,255,255,.8);
+    font-size: 16px;
+    border-radius:20px;
+    color: #111111;
+    transition: all .3s ease-in-out;
+    height: 36px;
+    display: inline-block;
+    line-height: 36px;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+.pin-box-options-menu-bottom-item:hover{
+    background: rgba(255,255,255,.95);
+}
+.item-icon{
+    width: 36px;
+    height: 36px;
+
+}
+.fa-arrow-right{
+    transform: rotate(-45deg);
+}
+.description{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+.description-user{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.description-text{
+    font-size: 14px;
+    color: #111111;
+    font-weight: 600;
+}
+
+footer{
+    padding: 15px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+.devf{
+    color: #c5a2ff;
+    font-weight: bold;
 }
