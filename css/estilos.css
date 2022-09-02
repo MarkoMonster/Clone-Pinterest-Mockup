@@ -87,7 +87,7 @@ main  {
     margin-top: 15px;
 }
 .container-grid{
-    display: gird;
+    /* display: grid; */
     columns: 5;
     width: 95%;
 }
@@ -95,6 +95,7 @@ main  {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .container-pin{
     position: relative;
@@ -194,9 +195,75 @@ footer{
     box-shadow: 0 0 8px rgba(0,0,0,.1);
     margin-top: 15px;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
 }
 .devf{
     color: #c5a2ff;
     font-weight: bold;
 }
+
+@media (max-width: 575px) { 
+    header{
+        justify-content: center ;
+        padding: 5px 0;
+        box-shadow: 0 0 8px rgba(0,0,0,.1);
+    }
+    .container{
+        width: 95%;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 'nl search search nr';
+    
+    }
+    .link{
+        background: white;
+        color: black;
+        transition: all .3s ease-in-out;
+        border-radius: 24px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .link:nth-child(3) {
+        display: none;
+    }
+    .link:nth-child(4) {
+        display: none;
+    }
+
+    main  {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .container-grid{
+        columns: 2;
+        width: 96%;
+        gap: 20px;
+    }
+    .link-icon{
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+    
+
+    /*------------------------------------------------------------------------*/
+    
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) { ... } */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) { ... } */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+    
+} */
