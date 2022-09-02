@@ -18,7 +18,7 @@ header{
     width: 98%;
     display: grid;
     gap: 1%;
-    grid-template-columns: 22% 66% 10% ;
+    grid-template-columns: 26% 60% 10% ;
     grid-template-areas: 'nl search nr';
 
 }
@@ -55,7 +55,7 @@ header{
     border-radius: 24px;
     height: 48px;
     line-height: 48px;
-    padding: 0 15px;
+    padding: 0 10px;
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 16px;
@@ -201,6 +201,35 @@ footer{
     color: #c5a2ff;
     font-weight: bold;
 }
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    .link:nth-child(3) {
+        display: none;
+    }
+    .link:nth-child(4) {
+        display: none;
+    }
+    .container-grid{
+        columns: 3;
+        width: 96%;
+        gap: 20px;
+    }
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .link:nth-child(3) {
+        display: none;
+    }
+    .link:nth-child(4) {
+        display: none;
+    }
+    .container-grid{
+        columns: 3;
+        width: 96%;
+        gap: 20px;
+    }
+}
 
 @media (max-width: 575px) { 
     header{
@@ -251,19 +280,4 @@ footer{
         width: 30px;
         height: 30px;
     }
-    
-
-    /*------------------------------------------------------------------------*/
-    
- }
-
-/* Small devices (landscape phones, less than 768px) */
-/* @media (max-width: 767.98px) { ... } */
-
-/* Medium devices (tablets, less than 992px) */
-/* @media (max-width: 991.98px) { ... } */
-
-/* Large devices (desktops, less than 1200px) */
-/* @media (max-width: 1199.98px) {
-    
-} */
+}
